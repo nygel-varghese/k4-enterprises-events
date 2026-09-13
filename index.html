@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K4 Enterprises Events — Activations and Live Events</title>
+<meta name="description" content="We plan, staff, and run activations and live events for malls and sports properties, end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="#top">K4 Enterprises Events</a>
+  <a class="nav-cta" href="#contact">Start a project</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <h1>We build the moments<br>people show up for.</h1>
+    <p class="hero__sub">Activations, pop-ups, and live events for malls and sports properties — planned, staffed, and run end to end.</p>
+    <a class="btn" href="#contact">Start a project</a>
+
+    <dl class="stat-strip">
+      <div class="stat"><dt>120+</dt><dd>Activations delivered</dd></div>
+      <div class="stat"><dt>40</dt><dd>Mall partners</dd></div>
+      <div class="stat"><dt>15</dt><dd>Sports properties</dd></div>
+    </dl>
+  </section>
+
+  <section class="services" id="services">
+    <h2>What we run</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Mall activations</h3>
+        <p>Pop-up experiences and seasonal takeovers built around the way people already move through a mall.</p>
+      </div>
+      <div class="service">
+        <h3>Sports event production</h3>
+        <p>Fan zones, halftime activations, and sponsor villages at stadiums and arenas — game day, handled.</p>
+      </div>
+      <div class="service">
+        <h3>Retail and brand pop-ups</h3>
+        <p>Short-run installations designed to turn foot traffic into something a brand can measure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" id="trust">
+    <div class="trust-inner">
+      <h2>Built to be the easy part of your event</h2>
+      <p class="trust-intro">Malls and sports properties don't need another vendor to manage — they need one team that owns the outcome. That's the model we run on.</p>
+
+      <div class="trust-grid">
+        <ul class="accordion" id="trust-accordion">
+          <li class="accordion-item is-open">
+            <button class="accordion-trigger" aria-expanded="true" aria-controls="acc-panel-1" id="acc-trigger-1">
+              <span>Single point of contact</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-panel-1" role="region" aria-labelledby="acc-trigger-1">
+              <div class="accordion-panel-inner">
+                <p>One team owns planning, staffing, and execution, so you're not coordinating five vendors on event day.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-2" id="acc-trigger-2">
+              <span>Vetted vendor network</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-panel-2" role="region" aria-labelledby="acc-trigger-2">
+              <div class="accordion-panel-inner">
+                <p>Every supplier we bring in, from rigging to security, is vetted and insured before they set foot on-site.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-3" id="acc-trigger-3">
+              <span>End-to-end management</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-panel-3" role="region" aria-labelledby="acc-trigger-3">
+              <div class="accordion-panel-inner">
+                <p>We handle permits, staffing, setup, and breakdown — not just the parts that are easy to photograph.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-4" id="acc-trigger-4">
+              <span>Safety-first execution</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-panel-4" role="region" aria-labelledby="acc-trigger-4">
+              <div class="accordion-panel-inner">
+                <p>Trained on-site leads, clear crowd-flow plans, and a safety briefing before every activation goes live.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-5" id="acc-trigger-5">
+              <span>Careful with your data</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-panel" id="acc-panel-5" role="region" aria-labelledby="acc-trigger-5">
+              <div class="accordion-panel-inner">
+                <p>Attendee and partner information collected on-site is handled under a clear process, not left on a clipboard.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="trust-image">
+          <img src="assets/image/about-placeholder.jpg" alt="Crew setting up an activation" width="900" height="1125">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const items = document.querySelectorAll('#trust-accordion .accordion-item');
+      items.forEach(function (item) {
+        const trigger = item.querySelector('.accordion-trigger');
+        trigger.addEventListener('click', function () {
+          const isOpen = item.classList.contains('is-open');
+          items.forEach(function (other) {
+            other.classList.remove('is-open');
+            other.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+  </script>
+
+  <section class="case-studies" id="work">
+    <h2>Recent work</h2>
+    <div class="case-grid">
+      <a class="case-card" href="work/mall-weekend-activation.html">
+        <div class="case-card__image" style="background-image:url('assets/image/mall-activation.jpg')"></div>
+        <h3>200,000 shoppers, one weekend</h3>
+        <p>Inside a three-day mall activation built to move with peak weekend footfall.</p>
+      </a>
+
+      <a class="case-card" href="work/stadium-fan-zone.html">
+        <div class="case-card__image case-card__image--video" style="background-image:url('assets/image/fan-zone.jpg')">
+          <span class="play-badge" aria-hidden="true">▶</span>
+        </div>
+        <h3>Inside the stadium fan zone</h3>
+        <p>How we ran a 6,000-capacity fan zone for a season opener, gate to final whistle.</p>
+      </a>
+
+      <a class="case-card" href="work/retail-popup-launch.html">
+        <div class="case-card__image" style="background-image:url('assets/image/popup-launch.jpg')"></div>
+        <h3>A pop-up that outsold projections in 10 days</h3>
+        <p>The staffing and layout decisions behind a short-run retail launch.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Tell us what you're planning</h2>
+    <p class="contact__sub">Share a few details and we'll get back to you with next steps.</p>
+
+    <form class="contact-form" id="contact-form" method="POST" action="https://api.web3forms.com/submit">
+      <!-- Get a free access key at web3forms.com and paste it below -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New event inquiry from the website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company">
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="event_type">Event type</label>
+        <select id="event_type" name="event_type">
+          <option value="mall_activation">Mall activation</option>
+          <option value="sports_event">Sports event</option>
+          <option value="retail_popup">Retail pop-up</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field field--full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send inquiry</button>
+    </form>
+
+    <p class="form-status" id="form-status" role="status" hidden></p>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          form.hidden = true;
+          status.textContent = "Thanks — we've got your message and will get back to you shortly.";
+          status.hidden = false;
+        } else {
+          throw new Error(result.message || 'Something went wrong');
+        }
+      } catch (err) {
+        status.textContent = "Something went wrong sending that. Try again, or email us directly.";
+        status.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Send inquiry';
+      }
+    });
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Brand Name</p>
+  <nav class="footer-links">
+    <a href="#" aria-label="Instagram">
+      <span class="footer-icon" style="--icon: url('assets/icons/Instagram.png')"></span>
+    </a>
+    <a href="#" aria-label="LinkedIn">
+      <span class="footer-icon" style="--icon: url('assets/icons/Facebook.png')"></span>
+    </a>
+  </nav>
+</footer>
+
+</body>
+</html>
