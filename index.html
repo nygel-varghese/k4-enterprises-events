@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K4 Enterprises Events — Activations and Live Events</title>
+<title>K4 Events — Activations &amp; Live Events</title>
 <meta name="description" content="We plan, staff, and run activations and live events for malls and sports properties, end to end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,9 @@
 <body>
 
 <header class="site-header">
-  <a class="wordmark" href="#top">K4 Enterprises Events</a>
-  <a class="nav-cta" href="#contact">Start a project</a>
+  <a class="wordmark" href="#top">K4 Events</a>
+  <!-- Replace the number below with your real WhatsApp business number (digits only, country code first) -->
+  <a class="nav-cta" href="https://wa.me/+971569882976" target="_blank" rel="noopener">Chat on WhatsApp &rarr;</a>
 </header>
 
 <main id="top">
@@ -22,7 +23,12 @@
   <section class="hero">
     <h1>We build the moments<br>people show up for.</h1>
     <p class="hero__sub">Activations, pop-ups, and live events for malls and sports properties — planned, staffed, and run end to end.</p>
-    <a class="btn" href="#contact">Start a project</a>
+
+    <div class="hero-ctas">
+      <a class="btn" href="#contact">Start a project</a>
+      <!-- Replace the href below with your Facebook page URL -->
+      <a class="btn-secondary" href="https://www.facebook.com/k4enterprise" target="_blank" rel="noopener">Follow on Facebook</a>
+    </div>
 
     <dl class="stat-strip">
       <div class="stat"><dt>120+</dt><dd>Activations delivered</dd></div>
@@ -43,7 +49,7 @@
         <p>Fan zones, halftime activations, and sponsor villages at stadiums and arenas — game day, handled.</p>
       </div>
       <div class="service">
-        <h3>Retail and brand pop-ups</h3>
+        <h3>Retail &amp; brand pop-ups</h3>
         <p>Short-run installations designed to turn foot traffic into something a brand can measure.</p>
       </div>
     </div>
@@ -147,25 +153,23 @@
   <section class="case-studies" id="work">
     <h2>Recent work</h2>
     <div class="case-grid">
-      <a class="case-card" href="work/mall-weekend-activation.html">
-        <div class="case-card__image" style="background-image:url('assets/image/mall-activation.jpg')"></div>
-        <h3>200,000 shoppers, one weekend</h3>
-        <p>Inside a three-day mall activation built to move with peak weekend footfall.</p>
+      <a class="case-card" href="work/ladies-volleyball.html">
+        <div class="case-card__image" style="background-image:url('assets/image/ladies-volleyball-card.jpg')"></div>
+        <h3>Supporting women in sport</h3>
+        <p>Supporting the Aktive Sports 1st Ladies Volleyball League in Dubai through sponsorship, community, and sport.</p>
       </a>
 
-      <a class="case-card" href="work/stadium-fan-zone.html">
-        <div class="case-card__image case-card__image--video" style="background-image:url('assets/image/fan-zone.jpg')">
-          <span class="play-badge" aria-hidden="true">▶</span>
-        </div>
-        <h3>Inside the stadium fan zone</h3>
-        <p>How we ran a 6,000-capacity fan zone for a season opener, gate to final whistle.</p>
+      <a class="case-card" href="work/rak-mall-spelling-bee.html">
+        <div class="case-card__image" style="background-image:url('assets/image/spelling-bee-card.jpg')"></div>
+        <h3>A spelling bee for young minds</h3>
+        <p>Bringing more than 30 young students and their families together for an engaging educational event at RAK Mall.</p>
       </a>
 
-      <a class="case-card" href="work/retail-popup-launch.html">
+      <!-- <a class="case-card" href="work/retail-popup-launch.html">
         <div class="case-card__image" style="background-image:url('assets/image/popup-launch.jpg')"></div>
         <h3>A pop-up that outsold projections in 10 days</h3>
         <p>The staffing and layout decisions behind a short-run retail launch.</p>
-      </a>
+      </a> -->
     </div>
   </section>
 
@@ -175,7 +179,7 @@
 
     <form class="contact-form" id="contact-form" method="POST" action="https://api.web3forms.com/submit">
       <!-- Get a free access key at web3forms.com and paste it below -->
-      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="access_key" value="d3ddce90-5326-49c1-9d43-25c771b41b8a">
       <input type="hidden" name="subject" value="New event inquiry from the website">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
@@ -200,6 +204,8 @@
           <option value="mall_activation">Mall activation</option>
           <option value="sports_event">Sports event</option>
           <option value="retail_popup">Retail pop-up</option>
+          <option value="corporate_event">Corporate event</option>
+          <option value="personal_event">Personal event</option>
           <option value="other">Other</option>
         </select>
       </div>
@@ -208,10 +214,10 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-
+      
       <button type="submit" class="btn">Send inquiry</button>
     </form>
-
+    
     <p class="form-status" id="form-status" role="status" hidden></p>
   </section>
 
@@ -252,16 +258,21 @@
 </main>
 
 <footer class="site-footer">
-  <p>&copy; 2026 Brand Name</p>
+  <p>&copy; 2026 K4 Events - A Unit of K4 Enterprises FZE</p>
   <nav class="footer-links">
-    <a href="#" aria-label="Instagram">
-      <span class="footer-icon" style="--icon: url('assets/icons/Instagram.png')"></span>
+    <a href="https://www.facebook.com/k4enterprise" target="_blank" rel="noopener" aria-label="Facebook">
+      <span class="footer-icon" style="--icon: url('assets/icons/facebook.svg')"></span>
     </a>
-    <a href="#" aria-label="LinkedIn">
-      <span class="footer-icon" style="--icon: url('assets/icons/Facebook.png')"></span>
+    <a href="https://wa.me/+971569882976" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <span class="footer-icon" style="--icon: url('assets/icons/whatsapp.svg')"></span>
     </a>
   </nav>
 </footer>
+
+<!-- Replace the number in both wa.me links (footer + floating button) with your real WhatsApp business number, digits only, country code first, no + or spaces -->
+<a class="whatsapp-float" href="https://wa.me/+971569882976?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20an%20event" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <img src="assets/icons/whatsapp.svg" alt="" width="30" height="30">
+</a>
 
 </body>
 </html>
