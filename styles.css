@@ -720,6 +720,48 @@ main.article-main {
   .hero h1, .hero__sub { animation: none; }
 }
 
+/* ===== Light theme override (delete this block to revert) ===== */
+:root {
+  --ink: #f4f1e8;
+  --ink-panel: #e9e5d8;
+  --paper: #ffffff;
+  --paper-panel: #ece9de;
+
+  --text-on-ink: #16181c;
+  --text-on-ink-muted: #5a5d55;
+
+  --line-on-ink: rgba(22, 24, 28, 0.14);
+
+  --signal-text: #7a5800;   /* darker amber for yellow text on light */
+  --on-signal: #16181c;     /* text that sits on yellow buttons */
+}
+
+/* Buttons: --ink is now light, so pin the text color on yellow */
+.btn { color: var(--on-signal); }
+.btn-secondary:hover { color: var(--on-signal); border-color: var(--signal); }
+
+/* Yellow used as text -> darker amber for contrast */
+.nav-cta { color: var(--signal-text); }
+.nav-cta:hover { border-bottom-color: var(--signal-text); }
+.stat dt { color: var(--signal-text); }
+.btn-secondary { color: var(--signal-text); border-color: var(--signal-text); }
+.accordion-item.is-open .accordion-trigger { color: var(--signal-text); }
+.form-status { color: var(--signal-text); }
+.footer-links a:hover { color: var(--signal-text); }
+
+/* Focus rings need contrast on light */
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+a:focus-visible,
+.btn:focus-visible { outline-color: var(--signal-text); }
+
+/* Play badge was relying on light text over a dark circle */
+.play-badge { color: #f4f2ed; }
+
+/* Video letterbox stays dark */
+.article-video { background: #16181c; }
+
 a:focus-visible, .btn:focus-visible {
   outline: 2px solid var(--signal);
   outline-offset: 3px;
