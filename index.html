@@ -31,12 +31,59 @@
     </div>
 
     <dl class="stat-strip">
-      <div class="stat"><dt>120+</dt><dd>Activations delivered</dd></div>
-      <div class="stat"><dt>40</dt><dd>Mall partners</dd></div>
-      <div class="stat"><dt>15</dt><dd>Sports properties</dd></div>
+      <div class="stat"><dt>5</dt><dd>Activations delivered</dd></div>
+      <div class="stat"><dt>Multiple</dt><dd>Mall partners</dd></div>
+      <div class="stat"><dt>5</dt><dd>Sports properties</dd></div>
     </dl>
   </section>
+    <!-- ===== UPCOMING EVENT =====
+       Paste this block right AFTER the closing </section> of the hero and BEFORE <section class="services" ...>.
+       TO HIDE the whole section: add the word  hidden  to the opening tag, e.g. <section class="upcoming" id="upcoming" hidden ...>
+       TO SHOW it again: remove the word  hidden.
+       The "Event completed" badge appears by itself once data-event-end has passed. -->
+  <section class="upcoming" id="upcoming" data-event-end="2026-10-12T00:00:00+04:00">
+    <p class="upcoming-label">Upcoming event</p>
 
+    <article class="event-card">
+      <div class="event-card__date">
+        <span class="event-card__day">11</span>
+        <span class="event-card__month">Oct</span>
+        <span class="event-card__year">2026</span>
+      </div>
+
+      <div class="event-card__body">
+        <p class="event-badge" id="event-completed-badge" hidden>Event completed</p>
+        <h2>K4 Ladies Volleyball League</h2>
+        <p class="event-card__place">Fujairah, UAE</p>
+        <p class="event-card__tag">Stronger Together &bull; Play with Passion &bull; Rise as One</p>
+
+        <div class="hero-ctas">
+          <a class="btn" href="upcoming-events/girls-volleyball-oct-11.html">View details</a>
+          <a class="btn-secondary" id="event-whatsapp" href="https://wa.me/+971569882976?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20K4%20Ladies%20Volleyball%20League" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Save your image as assets/image/girls-volleyball-oct-11.jpg. If the file is missing, the card falls back to text only. -->
+      <div class="event-card__image">
+        <img src="assets/image/girls-volleyball-oct-11-card.jpg" alt="K4 Ladies Volleyball League" width="760" height="570"
+             onerror="var c=this.closest('.event-card');c.classList.add('no-image');this.parentNode.remove();">
+      </div>
+    </article>
+  </section>
+
+  <script>
+    (function () {
+      var section = document.getElementById('upcoming');
+      var end = new Date(section.getAttribute('data-event-end'));
+      if (new Date() >= end) {
+        document.getElementById('event-completed-badge').hidden = false;
+        section.querySelector('.upcoming-label').textContent = 'Past event';
+        document.getElementById('event-whatsapp').hidden = true;
+      }
+    })();
+  </script>
+
+  
   <section class="services" id="services">
     <h2>What we run</h2>
     <div class="services-grid">

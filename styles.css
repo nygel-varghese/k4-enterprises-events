@@ -720,7 +720,224 @@ main.article-main {
   .hero h1, .hero__sub { animation: none; }
 }
 
-a:focus-visible, .btn:focus-visible {
-  outline: 2px solid var(--signal);
-  outline-offset: 3px;
+/* ===== Light theme override: white + steel (delete this block to revert) ===== */
+:root {
+  --ink: #ffffff;
+  --ink-panel: #eef2f5;
+  --paper: #ffffff;
+  --paper-panel: #e8eef2;
+
+  --text-on-ink: #16181c;
+  --text-on-ink-muted: #55606a;
+
+  --line-on-ink: rgba(22, 24, 28, 0.12);
+}
+
+/* Primary buttons stay yellow; --ink is now white, so pin the text color */
+.btn { color: #16181c; }
+
+/* Secondary button: steel instead of yellow */
+.btn-secondary { color: var(--steel); border-color: var(--steel); }
+.btn-secondary:hover { background: var(--steel); color: #ffffff; }
+
+/* Everything else that was yellow becomes steel */
+.nav-cta { color: var(--steel); }
+.nav-cta:hover { border-bottom-color: var(--steel); }
+.stat dt { color: var(--steel); }
+.services-grid { border-top-color: var(--steel); }
+.trust-image { border-bottom-color: var(--steel); }
+.accordion-item.is-open .accordion-trigger { color: var(--steel); }
+.form-status { color: var(--steel); }
+.footer-links a:hover { color: var(--steel); }
+
+/* Focus rings need contrast on white */
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+a:focus-visible,
+.btn:focus-visible { outline-color: var(--steel); }
+
+/* Play badge relied on light text over a dark circle */
+.play-badge { color: #f4f2ed; }
+
+/* Video letterbox stays dark */
+.article-video { background: #16181c; }
+
+
+/* ===== Upcoming event: homepage section + event page (append to the END of styles.css) ===== */
+
+.upcoming {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 0;
+}
+
+.upcoming[hidden] { display: none; }
+
+.upcoming-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.upcoming-label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--steel);
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: auto 1fr minmax(0, 380px);
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: var(--ink-panel);
+  border-top: 3px solid var(--steel);
+}
+
+.event-card.no-image { grid-template-columns: auto 1fr; }
+
+.event-card__date {
+  min-width: 96px;
+  padding-right: 2.5rem;
+  border-right: 1px solid var(--line-on-ink);
+  text-align: center;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.event-card__day {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--steel);
+}
+
+.event-card__month {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.event-card__year {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-on-ink-muted);
+}
+
+.event-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+}
+
+.event-card__place {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.event-card__tag {
+  margin: 0.5rem 0 0;
+  color: var(--text-on-ink-muted);
+}
+
+.event-card__image {
+  align-self: center;
+  aspect-ratio: 4 / 3;
+  border-bottom: 3px solid var(--steel);
+  overflow: hidden;
+}
+
+.event-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.event-badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--steel);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.event-badge[hidden],
+.hero-ctas [hidden] { display: none; }
+
+.event-card .event-badge { margin: 0 0 0.75rem; }
+
+/* Event details page */
+
+.event-facts {
+  margin: 0 0 2rem;
+  border-top: 1px solid var(--line-on-paper);
+}
+
+.event-facts li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line-on-paper);
+  font-size: 1.05rem;
+}
+
+.event-facts strong { color: var(--steel); }
+
+.event-motto {
+  margin: 2.5rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--steel);
+}
+
+[data-cta][hidden] { display: none; }
+
+.more-work { border-top: 1px solid var(--line-on-paper); margin-top: 3rem; }
+
+@media (max-width: 860px) {
+  .event-card,
+  .event-card.no-image {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+  .event-card__image { order: -1; }
+  .event-card__date {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0 0 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--line-on-ink);
+    text-align: left;
+  }
+  .event-card__day { font-size: 3rem; }
+  .event-card__month { margin-top: 0; font-size: 1.3rem; }
+  .event-card__year { margin-top: 0; }
+}
+
+@media (max-width: 600px) {
+  .upcoming { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
