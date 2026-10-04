@@ -55,7 +55,7 @@
 
     <div class="article-body">
       <!-- Save your image as assets/image/k4-ladies-volleyball-league.jpg (any shape; it is shown in full, not cropped). If the file is missing, it is simply left out. -->
-      <img class="article-image" src="../assets/image/girls-volleyball-oct-11.jpg" alt="K4 Ladies Volleyball League - Oct 11, 2026"
+      <img class="article-image" src="../assets/image/girls-volleyball-oct-11-banner.jpg" alt="K4 Ladies Volleyball League - Oct 11, 2026"
            onerror="this.remove();" style="margin-top:0">
 
       <p>Get ready for an exciting day of volleyball, teamwork, friendship, and fierce competition.</p>
